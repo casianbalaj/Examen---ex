@@ -348,35 +348,38 @@ namespace SubnauticaGraphics
             using (SolidBrush whiteBrush = new SolidBrush(Color.FromArgb(220, 240, 240, 230)))
             using (SolidBrush algaeBrush = new SolidBrush(Color.FromArgb(150, 60, 120, 70)))
             using (Pen rustPen = new Pen(Color.FromArgb(150, 120, 80, 50), 2))
+            using (Font stopFont = new Font("Arial", size * 0.35f, FontStyle.Bold))
             {
-                PointF[] triangle = new PointF[]
+                PointF[] octagon = new PointF[8];
+                for (int i = 0; i < 8; i++)
                 {
-                    new PointF(0, -size),
-                    new PointF(-size * 0.866f, size / 2),
-                    new PointF(size * 0.866f, size / 2)
-                };
+                    double angle = i * Math.PI / 4 - Math.PI / 8;
+                    octagon[i] = new PointF(
+                        (float)(size * Math.Cos(angle)),
+                        (float)(size * Math.Sin(angle))
+                    );
+                }
 
-                graphics.FillPolygon(redBrush, triangle);
-                graphics.DrawPolygon(rustPen, triangle);
+                graphics.FillPolygon(redBrush, octagon);
+                graphics.DrawPolygon(rustPen, octagon);
 
-                PointF[] innerTriangle = new PointF[]
+                using (StringFormat format = new StringFormat())
                 {
-                    new PointF(0, -size * 0.7f),
-                    new PointF(-size * 0.6f, size * 0.3f),
-                    new PointF(size * 0.6f, size * 0.3f)
-                };
-                graphics.FillPolygon(whiteBrush, innerTriangle);
+                    format.Alignment = StringAlignment.Center;
+                    format.LineAlignment = StringAlignment.Center;
+                    graphics.DrawString("STOP", stopFont, whiteBrush, 0, 0, format);
+                }
 
                 for (int i = 0; i < 5; i++)
                 {
                     int ax = random.Next(-size, size);
-                    int ay = random.Next(-size, size / 2);
+                    int ay = random.Next(-size, size);
                     graphics.FillEllipse(algaeBrush, ax, ay, 8, 12);
                 }
 
                 using (Pen rustPost = new Pen(Color.FromArgb(180, 100, 70, 40), 5))
                 {
-                    graphics.DrawLine(rustPost, 0, size / 2, 0, size + 40);
+                    graphics.DrawLine(rustPost, 0, size, 0, size + 40);
                 }
             }
 
@@ -385,13 +388,14 @@ namespace SubnauticaGraphics
 
         private void DrawObjective6_Fish()
         {
+            int[] fishXPositions = { 120, 280, 450, 620, 180, 350, 520, 680, 90, 240, 400, 560, 700, 150, 480 };
+            int[] fishYPositions = { 150, 120, 180, 140, 280, 250, 300, 220, 380, 350, 420, 390, 360, 480, 460 };
+            float[] fishSizes = { 0.8f, 0.6f, 1.0f, 0.7f, 0.9f, 0.65f, 0.85f, 0.75f, 1.1f, 0.7f, 0.9f, 0.8f, 0.6f, 0.95f, 0.7f };
+
             for (int i = 0; i < 15; i++)
             {
-                int fishX = random.Next(50, 750);
-                int fishY = random.Next(100, 500);
-                float fishSize = (float)(random.NextDouble() * 0.5 + 0.5);
                 Color fishColor = GetRandomFishColor();
-                DrawSingleFish(fishX, fishY, fishSize, fishColor);
+                DrawSingleFish(fishXPositions[i], fishYPositions[i], fishSizes[i], fishColor);
             }
         }
 

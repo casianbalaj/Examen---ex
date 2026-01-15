@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubnauticaGraphics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e8c6fdaec0e3adb0d2c03928de06f3eb37649a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09806d621f45063498b7b3bbf918f0da843246de")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubnauticaGraphics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubnauticaGraphics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
