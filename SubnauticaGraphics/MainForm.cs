@@ -69,35 +69,64 @@ namespace SubnauticaGraphics
             int width = 161;
             int height = 100;
 
-            switch (flagNumber)
+            DrawTuvaluFlag(x, y, width, height);
+        }
+
+        private void DrawTuvaluFlag(int x, int y, int width, int height)
+        {
+            using (SolidBrush skyBlueBrush = new SolidBrush(Color.FromArgb(65, 186, 233)))
+            using (SolidBrush yellowBrush = new SolidBrush(Color.FromArgb(255, 223, 0)))
             {
-                case 1:
-                    DrawAlgeriaFlag(x, y, width, height);
-                    break;
-                default:
-                    DrawAlgeriaFlag(x, y, width, height);
-                    break;
+                graphics.FillRectangle(skyBlueBrush, x, y, width, height);
+
+                int cantonWidth = width / 2;
+                int cantonHeight = height / 2;
+                DrawUnionJack(x, y, cantonWidth, cantonHeight);
+
+                PointF[] starPositions = new PointF[]
+                {
+                    new PointF(x + width * 0.70f, y + height * 0.18f),
+                    new PointF(x + width * 0.82f, y + height * 0.28f),
+                    new PointF(x + width * 0.88f, y + height * 0.42f),
+                    new PointF(x + width * 0.85f, y + height * 0.58f),
+                    new PointF(x + width * 0.78f, y + height * 0.72f),
+                    new PointF(x + width * 0.68f, y + height * 0.82f),
+                    new PointF(x + width * 0.58f, y + height * 0.70f),
+                    new PointF(x + width * 0.62f, y + height * 0.48f),
+                    new PointF(x + width * 0.72f, y + height * 0.38f)
+                };
+
+                foreach (PointF pos in starPositions)
+                {
+                    DrawStar((int)pos.X, (int)pos.Y, 6, yellowBrush);
+                }
             }
         }
 
-        private void DrawAlgeriaFlag(int x, int y, int width, int height)
+        private void DrawUnionJack(int x, int y, int width, int height)
         {
-            using (SolidBrush greenBrush = new SolidBrush(Color.FromArgb(0, 122, 51)))
+            using (SolidBrush navyBlueBrush = new SolidBrush(Color.FromArgb(1, 33, 105)))
             using (SolidBrush whiteBrush = new SolidBrush(Color.White))
-            using (SolidBrush redBrush = new SolidBrush(Color.FromArgb(210, 16, 52)))
+            using (SolidBrush redBrush = new SolidBrush(Color.FromArgb(200, 16, 46)))
+            using (Pen whitePen = new Pen(whiteBrush, height * 0.1f))
+            using (Pen redDiagonalPen = new Pen(redBrush, height * 0.06f))
+            using (Pen redCrossPen = new Pen(redBrush, height * 0.18f))
             {
-                graphics.FillRectangle(greenBrush, x, y, width / 2, height);
-                graphics.FillRectangle(whiteBrush, x + width / 2, y, width / 2, height);
+                graphics.FillRectangle(navyBlueBrush, x, y, width, height);
 
-                int centerX = x + width / 2;
-                int centerY = y + height / 2;
-                int outerRadius = (int)(height * 0.25);
-                int innerRadius = (int)(outerRadius * 0.66);
+                graphics.DrawLine(whitePen, x, y, x + width, y + height);
+                graphics.DrawLine(whitePen, x + width, y, x, y + height);
 
-                graphics.FillEllipse(redBrush, centerX - outerRadius, centerY - outerRadius, outerRadius * 2, outerRadius * 2);
-                graphics.FillEllipse(whiteBrush, centerX - innerRadius + 5, centerY - innerRadius, innerRadius * 2, innerRadius * 2);
+                graphics.DrawLine(redDiagonalPen, x, y, x + width, y + height);
+                graphics.DrawLine(redDiagonalPen, x + width, y, x, y + height);
 
-                DrawStar(centerX + 8, centerY, (int)(height * 0.15), redBrush);
+                float whiteVerticalWidth = width * 0.3f;
+                float whiteHorizontalHeight = height * 0.3f;
+                graphics.FillRectangle(whiteBrush, x + (width - whiteVerticalWidth) / 2, y, whiteVerticalWidth, height);
+                graphics.FillRectangle(whiteBrush, x, y + (height - whiteHorizontalHeight) / 2, width, whiteHorizontalHeight);
+
+                graphics.DrawLine(redCrossPen, x + width / 2, y, x + width / 2, y + height);
+                graphics.DrawLine(redCrossPen, x, y + height / 2, x + width, y + height / 2);
             }
         }
 

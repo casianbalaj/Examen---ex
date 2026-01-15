@@ -12,3 +12,4 @@
 /Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.pdb
 /Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.genruntimeconfig.cache
 /Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/ref/SubnauticaGraphics.dll
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.sourcelink.json
