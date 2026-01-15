@@ -1,0 +1,14 @@
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.GeneratedMSBuildEditorConfig.editorconfig
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.AssemblyInfoInputs.cache
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.AssemblyInfo.cs
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.csproj.CoreCompileInputs.cache
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/bin/Debug/net8.0-windows/SubnauticaGraphics
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/bin/Debug/net8.0-windows/SubnauticaGraphics.deps.json
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/bin/Debug/net8.0-windows/SubnauticaGraphics.runtimeconfig.json
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/bin/Debug/net8.0-windows/SubnauticaGraphics.dll
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/bin/Debug/net8.0-windows/SubnauticaGraphics.pdb
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.dll
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/refint/SubnauticaGraphics.dll
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.pdb
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/SubnauticaGraphics.genruntimeconfig.cache
+/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/obj/Debug/net8.0-windows/ref/SubnauticaGraphics.dll

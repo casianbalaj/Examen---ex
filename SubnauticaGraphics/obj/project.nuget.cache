@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "M4yBl4KAS4g=",
+  "success": true,
+  "projectFilePath": "/Users/casianbalaj/Desktop/Examen - ex/SubnauticaGraphics/SubnauticaGraphics.csproj",
+  "expectedPackageFiles": [
+    "/Users/casianbalaj/.nuget/packages/microsoft.windowsdesktop.app.ref/8.0.15/microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
